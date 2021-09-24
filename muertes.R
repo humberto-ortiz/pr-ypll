@@ -68,11 +68,15 @@ hosp_mort <- deaths %>%
 
 ypll <- deaths %>%
   mutate(ypll = 75 - (age_start + (age_end - age_start)/2)) %>%
-  mutate(ypll = if_else(ypll < 0, 0, ypll))
+  mutate(ypll = if_else(ypll < 0, 0, ypll)) %>%
+  group_by(date) %>%
+  summarize(ypll = sum(ypll), .groups = "drop") %>%
+  mutate(ypll_week_avg =  ma7(date, ypll)$moving_avg)
 
 ggplot(ypll, aes(x=date, y=cumsum(ypll))) + geom_line()
 
-ggplot(ypll, aes(x=date, y=ypll)) + geom_col()
+ggplot(ypll, aes(x=date, y=ypll)) + geom_col() +
+  geom_line(aes(y = ypll_week_avg), color="black", size = 1.25)
 
 # Deaths ------------------------------------------------------------------
 last_day <- today() - days(7)
