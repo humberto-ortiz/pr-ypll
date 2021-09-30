@@ -74,9 +74,11 @@ ypll <- deaths %>%
   mutate(ypll_week_avg =  ma7(date, ypll)$moving_avg)
 
 ggplot(ypll, aes(x=date, y=cumsum(ypll))) + geom_line()
+ggsave("ypll-cumul.png")
 
 ggplot(ypll, aes(x=date, y=ypll)) + geom_col() +
   geom_line(aes(y = ypll_week_avg), color="black", size = 1.25)
+ggsave("ypll.png")
 
 # Deaths ------------------------------------------------------------------
 last_day <- today() - days(7)
@@ -126,3 +128,4 @@ plot_deaths <- function(hosp_mort,
 }
 
 plot_deaths(hosp_mort, yscale = TRUE)
+ggsave("muertes.png")
