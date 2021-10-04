@@ -7,6 +7,7 @@ library(tidyverse)
 library(lubridate)
 library(scales)
 
+
 # moving average ----------------------------------------------------------
 
 ma7 <- function(d, y, k = 7) 
