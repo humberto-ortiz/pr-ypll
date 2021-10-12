@@ -68,6 +68,9 @@ Sciences (NIGMS), a component of the National Institutes of Health (NIH).
 
 ## References
 
-Code to compute and plot YPLL from the Department of Health data.
-
-Based on Rafael Irizarry's COVID-19 dashboard: https://github.com/rafalab/pr-covid
+1. https://www.elnuevodia.com/noticias/locales/notas/la-nina-de-seis-anos-que-murio-de-covid-19-se-contagio-en-su-entorno-familiar/
+2. https://www.cdc.gov/injury/wisqars/fatal_help/definitions_ypll.html
+3. http://tpr.covidpr.info.
+4. https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PR&view=chart
+5. https://github.com/humberto-ortiz/pr-ypll
+6. https://github.com/rafalab/pr-covid
