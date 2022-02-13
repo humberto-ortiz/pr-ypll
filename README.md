@@ -1,8 +1,8 @@
 # Years of Potential Life Lost in PR due to COVID-19
 
 Humberto Ortiz-Zuazaga  
-2021-10-11
-*Updated:* 2022-02-13
+2021-10-11  
+**Updated:** 2022-02-13
 
 ## Abstract
 
